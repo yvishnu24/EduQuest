@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="animate.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="main">
+      <div id="mySidenav" class="sidenav">
+        <ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+          <button class="dropdown-btn">Select Category &#8681;
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="level1.html">Early Learners</a>
+            <a href="level2.html">Tweenagers</a>
+            <!-- <a href="level3.html">Above-18</a> -->
+          </div>
+        
+        </ul>
+      </div>
+      <span style="font-size:40px;cursor:pointer;color:white;" onclick="openNav()">&#9776; Menu</span>
+
+    </div> 
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+
+        }
+      </script>
+
+      <main>
+        <section>
+          <h1>TUTOR</h1>
+          <!-- <h1>DO COME & VISIT <span class="change_content"> </span> <span style="margin-top: -10px;"> | </span> </h1> -->
+          <p>"Are u facing difficulty in reading,writing and mathematics.We are here to help you out." <br>"Let's start
+            learning"</p>
+
+        </section>
+      </main>
+      <!-- <div class="container"> -->
+      <div class="container1" id="about">
+
+        <img src="/images/img1.jpg" alt="About" style="width:100%;">
+        <div class="text-block">
+          <div class="container">
+
+            <h4 style="color:rgb(249, 246, 246); font-size:2.13em; font-family:Arial, Helvetica, sans-serif;">About</h4>
+            <p>Tutor helps in analysing the performance of students with reading and writing disabilities.Reading
+              disabilities which include dyslexia, discalculia they face difficulties with words and numbers, usually
+              confused with similar kind of words. Here we are providing some activities. By continuous practicing they
+              can overcome the disabilities.</p>
+          </div>
+        </div>
+        <script>
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          var i;
+
+          for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </div>
+  </header>
+
+</body>
+
+</html>
